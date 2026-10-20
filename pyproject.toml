@@ -1,0 +1,36 @@
+[project]
+name = "nepal-fintech"
+version = "0.1.0"
+description = "Nepal-focused AI Wealth & Tax Advisory Multi-Agent System"
+readme = "README.md"
+authors = [
+    { name = "Ashwin-Burlakoti", email = "hacktivist2024@gmail.com" }
+]
+requires-python = ">=3.12"
+dependencies = [
+    "fastapi>=0.115.0",
+    "uvicorn[standard]>=0.30.0",
+    "pydantic[email]>=2.9.0",
+    "pydantic-settings>=2.5.0",
+    "sqlalchemy[asyncio]>=2.0.0",
+    "aiosqlite>=0.20.0",
+    "cryptography>=43.0.0",
+    "chromadb>=0.5.0",
+    "litellm>=1.48.0",
+    "httpx>=0.27.0",
+    "flet>=0.25.0",
+    "apscheduler>=3.10.0",
+]
+
+[project.scripts]
+nepal-fintech = "nepal_fintech.main:cli_main"
+
+[build-system]
+requires = ["uv_build>=0.13.0,<0.14.0"]
+build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+    "pytest>=9.1.1",
+    "pytest-asyncio>=1.4.0",
+]

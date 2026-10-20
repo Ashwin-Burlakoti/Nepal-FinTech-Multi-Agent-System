@@ -1,0 +1,50 @@
+Nepal Cooperative Tax Provisions - Summary
+
+Overview:
+Cooperatives in Nepal are governed under the Cooperative Act, 2074 (2017) and taxed under special provisions of the Income Tax Act, 2058.
+
+Tax Benefits for Cooperatives:
+
+1. Savings and Credit Cooperatives
+- Income from transactions with members is taxed at reduced rates.
+- Dividends distributed to members from cooperative profits may receive preferential treatment.
+- Section 11(3)(ka) of Income Tax Act: Income of cooperatives from transactions conducted solely among members is exempt up to certain thresholds.
+
+2. Agriculture Cooperatives
+- Income from agriculture cooperative activities may be fully exempt under Section 11 provisions.
+- Processing and marketing agricultural products through cooperatives receives favorable treatment.
+
+3. Multi-Purpose Cooperatives
+- Must maintain separate accounts for member and non-member transactions.
+- Non-member transaction income taxed at standard entity rates (25%).
+- Member transaction income may qualify for reduced rates.
+
+4. Community Development Cooperatives
+- Cooperatives involved in community development, rural electrification, and drinking water projects may qualify for full or partial tax exemption.
+
+Key Compliance Requirements:
+- Annual audit by cooperative department-approved auditor.
+- Annual General Meeting (AGM) must be held within 6 months of fiscal year end.
+- Separate accounting for member vs non-member transactions.
+- TDS obligations on payments to employees and contractors.
+
+Dividend Taxation:
+- Dividends paid by cooperatives: 5% TDS under Section 47.
+- Members may claim credit for TDS against their personal tax liability.
+
+Recent Amendments (2079/2080):
+- Stricter reporting requirements for savings and credit cooperatives.
+- NRB-imposed restrictions on cooperative lending activities.
+- Enhanced audit requirements for cooperatives with deposits exceeding NPR 10 crore.
+
+Strategic Tax Planning via Cooperatives:
+1. Route eligible business income through cooperative structures for reduced rates.
+2. Maximize member-transaction classification to benefit from exemptions.
+3. Leverage depreciation and investment allowances available to cooperatives.
+4. Utilize Section 12 retirement fund contributions through cooperative savings schemes.
+5. Consider cooperative housing schemes for combined land development tax benefits.
+
+Legal References:
+- Income Tax Act, 2058 - Sections 11, 47, Schedule 1
+- Cooperative Act, 2074 - Sections 26, 51, 62
+- NRB Directive 2079 on Cooperative Financial Reporting

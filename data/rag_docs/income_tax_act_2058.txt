@@ -1,0 +1,81 @@
+Nepal Income Tax Act, 2058 (2002) - Key Provisions for Tax Planning
+
+Section 1 - Short Title and Commencement
+This Act may be called the "Income Tax Act, 2058 (2002)". It shall come into force from the date of Chaitra 19, 2058 (April 1, 2002).
+
+Section 2 - Definitions
+"Person" includes natural person, entity, and couple.
+"Income year" means the period of 12 months commencing from the 1st of Shrawan.
+"Assessable income" means the total income minus exempt amounts.
+
+Section 5 - Imposition of Income Tax
+Income tax shall be imposed on the assessable income of each person for each income year.
+
+Section 10 - Tax Rates for Natural Persons
+For individuals with employment income:
+- First NPR 500,000: 1% social security tax
+- Next NPR 200,000: 10%
+- Next NPR 300,000: 20%
+- Next NPR 1,000,000: 30%
+- Remaining: 36%
+
+Section 11 - Couple Filing
+A couple may elect to file jointly. When filing jointly, the tax-free threshold is increased by 50%.
+
+Section 12 - Deductions from Employment Income
+(1) Contributions to approved retirement funds are deductible up to NPR 300,000 per year.
+(2) Life insurance premiums are deductible up to NPR 40,000 per year.
+(3) Medical insurance premiums paid by the employer are not taxable to the employee.
+
+Section 16 - Business Income
+Business income includes profits and gains from any business conducted by a person.
+
+Section 17 - Deductions Allowed from Business Income
+(1) General deductions: expenses incurred in gaining or producing the assessable income.
+(2) Interest: interest on money borrowed and used in the business is deductible.
+(3) Depreciation: as per Schedule 2.
+(4) Research and development expenses are deductible.
+(5) Repair and improvement expenses up to 7% of depreciation base.
+
+Section 18 - Non-Deductible Expenses
+(1) Personal or domestic expenses
+(2) Tax imposed under this Act
+(3) Fines, penalties, and similar payments
+(4) Expenses of a capital nature (except as allowed under depreciation)
+
+Section 23 - Tax Credits
+(1) Foreign tax credit: tax paid in a foreign country on foreign-source income can be credited.
+(2) Medical tax credit for disabled persons.
+
+Section 47 - Withholding Tax (TDS)
+Various rates for different payment types:
+- Employment income: as per Section 10 rates
+- Rent: 10% of gross amount
+- Service fees: 15%
+- Dividends: 5%
+
+Section 50 - Advance Tax
+Persons with estimated tax liability exceeding NPR 5,000 must pay advance tax in three installments.
+
+Section 56 - Penalties
+Failure to file returns: NPR 100 per month or 0.1% of assessable income.
+Understatement of income: 50% of underpaid tax.
+
+Schedule 1 - Tax Rates for Entities
+Entities other than natural persons:
+- Banks, financial institutions, insurance: 30%
+- Telecom, cigarette, liquor: 30%
+- Special industries: 20%
+- Other entities: 25%
+- Cooperatives: Special rates (see Cooperative Tax provisions)
+
+Schedule 2 - Depreciation Rates
+Category A (Buildings): 5% declining balance
+Category B (Furniture, fixtures): 25% declining balance
+Category C (Vehicles): 20% declining balance
+Category D (Machinery): 15% declining balance
+Category E (Computers): 25% declining balance
+
+Note: Section 24 provides for investment allowances for special industries.
+Section 24A: Industries established in remote areas get additional deductions.
+Section 24B: Export-oriented industries get reduced tax rates.

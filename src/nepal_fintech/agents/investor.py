@@ -64,7 +64,7 @@ class Investor(BaseTriadAgent):
             f"\nGovernment Incentives:\n{context.get('govt_incentives', 'N/A')}",
             f"\nLegal/Compliance Notes:\n{context.get('legal_notes', 'N/A')}",
             f"\nInvestment Horizon: {context.get('horizon', '3-5 years')}",
-            "\nProvide a long-term investment thesis with sector and "
+            "\nProvide a long-term investment thesis with sector and ",
             "company recommendations.",
         ]
         return "\n".join(parts)

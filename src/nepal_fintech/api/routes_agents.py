@@ -97,7 +97,7 @@ async def run_agent(
                 land_price_trend="Kathmandu valley & suburban land valuation",
             ),
             spillover_analysis=payload.action_summary,
-            timestamp=datetime.now(timezone.utc),
+            timestamp=datetime.now(datetime.UTC),
         )
         await save_macro_state(session, macro_state.model_dump_json())
 

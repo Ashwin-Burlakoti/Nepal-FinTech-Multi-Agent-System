@@ -64,7 +64,7 @@ class Trader(BaseTriadAgent):
             f"\nCompany Financials:\n{context.get('financials', 'N/A')}",
             f"\nRecent News/Sentiment:\n{context.get('news', 'N/A')}",
             f"\nGovernment Policies:\n{context.get('govt_policies', 'N/A')}",
-            "\nIdentify swing trade opportunities (1–6 months) with "
+            "\nIdentify swing trade opportunities (1–6 months) with ",
             "entry/exit zones. Advisory only.",
         ]
         return "\n".join(parts)

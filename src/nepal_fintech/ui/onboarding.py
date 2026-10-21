@@ -40,7 +40,7 @@ class IncomeRowControls:
                 spacing=6,
             ),
             padding=6,
-            border=ft.border.all(1, ft.Colors.OUTLINE_VARIANT),
+            border=ft.Border.all(1, ft.Colors.OUTLINE_VARIANT),
             border_radius=8,
         )
 
@@ -168,7 +168,7 @@ class OnboardingView:
                         ft.Divider(),
                         self.risk_dropdown,
                         self.status_text,
-                        ft.ElevatedButton(
+                        ft.FilledButton(
                             "Start Advisory →",
                             on_click=self._submit,
                             width=360,

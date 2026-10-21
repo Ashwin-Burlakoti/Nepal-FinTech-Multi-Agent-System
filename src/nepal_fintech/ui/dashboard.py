@@ -58,8 +58,8 @@ class DashboardView:
             self.status_text.value = f"❌ {agent_name} error: {exc}"
         self.page.update()
 
-    def _make_agent_button(self, label: str, agent_name: str) -> ft.ElevatedButton:
-        return ft.ElevatedButton(
+    def _make_agent_button(self, label: str, agent_name: str) -> ft.FilledButton:
+        return ft.FilledButton(
             label,
             on_click=lambda _: self._run_agent(agent_name),
             width=360,

@@ -3,7 +3,7 @@
 from __future__ import annotations
 
 import json
-from datetime import datetime, timezone
+from datetime import UTC, datetime
 
 from sqlalchemy import select
 from sqlalchemy.ext.asyncio import AsyncSession
@@ -23,7 +23,7 @@ async def create_user(session: AsyncSession, profile: UserProfile) -> int:
         ),
         portfolio_split=encrypt(profile.portfolio_split.model_dump_json()),
         risk_profile=profile.risk_profile,
-        created_at=datetime.now(timezone.utc),
+        created_at=datetime.now(UTC),
     )
     session.add(user)
     await session.commit()
@@ -62,7 +62,7 @@ async def save_notification(
         judge_verdict=payload.judge_verdict.decision,
         citations=json.dumps(payload.judge_verdict.citations),
         is_read=False,
-        created_at=datetime.now(timezone.utc),
+        created_at=datetime.now(UTC),
     )
     session.add(notif)
     await session.commit()
@@ -76,7 +76,7 @@ async def get_notifications(
     """List notifications for a user, optionally filtered to unread."""
     stmt = select(Notification).where(Notification.user_id == user_id)
     if unread_only:
-        stmt = stmt.where(Notification.is_read == False)  # noqa: E712
+        stmt = stmt.where(Notification.is_read == False)
     stmt = stmt.order_by(Notification.created_at.desc())
     result = await session.execute(stmt)
     rows = result.scalars().all()
@@ -116,7 +116,7 @@ async def save_macro_state(session: AsyncSession, state_json: str) -> int:
     """Cache a MarketAnalyzer macro state snapshot. Returns record ID."""
     record = MacroStateRecord(
         snapshot=state_json,
-        created_at=datetime.now(timezone.utc),
+        created_at=datetime.now(UTC),
     )
     session.add(record)
     await session.commit()

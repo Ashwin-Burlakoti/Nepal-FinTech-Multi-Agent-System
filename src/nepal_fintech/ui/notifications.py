@@ -14,7 +14,7 @@ class NotificationDrawer:
     def __init__(self, page: ft.Page, state: dict) -> None:
         self.page = page
         self.state = state
-        self.drawer = ft.NavigationDrawer(controls=[], position=ft.NavigationDrawerPosition.END)
+        self.drawer = ft.NavigationDrawer(controls=[])
         self._notif_list = ft.Column(scroll=ft.ScrollMode.AUTO, spacing=4)
 
     def refresh(self) -> None:
@@ -113,7 +113,7 @@ class NotificationDrawer:
                             for c in citations[:5]
                         ],
                     ]),
-                    padding=ft.padding.only(left=16, right=8, bottom=8),
+                    padding=ft.Padding.only(left=16, right=8, bottom=8),
                 ),
             ],
         )

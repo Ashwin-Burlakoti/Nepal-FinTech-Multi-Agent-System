@@ -2,14 +2,10 @@
 
 from __future__ import annotations
 
-import tempfile
-from pathlib import Path
-import pytest
-
-from nepal_fintech.rag.ingest import chunk_text, ingest_file
+from nepal_fintech.rag.ingest import chunk_text
 from nepal_fintech.rag.monitors import prune_expired_filings
-from nepal_fintech.rag.retriever import retrieve, retrieve_with_context
-from nepal_fintech.rag.store import ChromaStore, chroma_store
+from nepal_fintech.rag.retriever import retrieve_with_context
+from nepal_fintech.rag.store import ChromaStore
 
 
 def test_chunk_text_basic() -> None:

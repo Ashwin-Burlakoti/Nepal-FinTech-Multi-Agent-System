@@ -3,8 +3,8 @@
 from __future__ import annotations
 
 import logging
-from contextlib import asynccontextmanager
 from collections.abc import AsyncIterator
+from contextlib import asynccontextmanager
 
 from fastapi import FastAPI
 
@@ -53,9 +53,9 @@ def create_app() -> FastAPI:
     )
 
     # Register routers
-    from nepal_fintech.api.routes_user import router as user_router
     from nepal_fintech.api.routes_agents import router as agents_router
     from nepal_fintech.api.routes_notifications import router as notif_router
+    from nepal_fintech.api.routes_user import router as user_router
 
     app.include_router(user_router)
     app.include_router(agents_router)
@@ -75,7 +75,9 @@ def cli_main() -> None:
     """CLI entry point for nepal-fintech (api, ui, or all)."""
     import argparse
     import threading
+
     import uvicorn
+
     from nepal_fintech.ui.app import start_ui
 
     parser = argparse.ArgumentParser(description="Nepal FinTech AI Advisory System")

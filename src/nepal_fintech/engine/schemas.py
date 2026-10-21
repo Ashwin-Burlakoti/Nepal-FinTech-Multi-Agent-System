@@ -7,7 +7,6 @@ from typing import Literal
 
 from pydantic import BaseModel, EmailStr, Field, model_validator
 
-
 # ── User I/O ──────────────────────────────────────────────────────────
 
 

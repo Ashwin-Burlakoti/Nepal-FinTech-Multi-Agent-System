@@ -2,8 +2,10 @@
 
 from __future__ import annotations
 
-from unittest.mock import AsyncMock, patch
+from unittest.mock import patch
+
 import pytest
+from pydantic import ValidationError
 
 from nepal_fintech.agents.tax_planner import TaxPlanner
 from nepal_fintech.engine.schemas import NotificationPayload
@@ -73,9 +75,11 @@ async def test_triad_rejects_judge_without_citations() -> None:
         "citations": [],  # Violates required citations rule
     }
 
-    with patch(
-        "nepal_fintech.engine.triad.chat_json",
-        side_effect=[mock_thinker, mock_critique, mock_judge_no_citations],
+    with (
+        patch(
+            "nepal_fintech.engine.triad.chat_json",
+            side_effect=[mock_thinker, mock_critique, mock_judge_no_citations],
+        ),
+        pytest.raises((ValidationError, ValueError)),
     ):
-        with pytest.raises(Exception):  # Either Pydantic ValidationError or ValueError
-            await agent.run({})
+        await agent.run({})

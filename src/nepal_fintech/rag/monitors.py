@@ -4,7 +4,7 @@ from __future__ import annotations
 
 import hashlib
 import logging
-from datetime import datetime, timezone
+from datetime import UTC, datetime
 from typing import Any
 
 import httpx
@@ -50,7 +50,7 @@ class NepseFilingsMonitor:
         docs: list[str] = []
         metadatas: list[dict[str, Any]] = []
         ids: list[str] = []
-        current_year = datetime.now(timezone.utc).year
+        current_year = datetime.now(UTC).year
 
         for item in filings:
             ticker = str(item.get("symbol") or item.get("company_code") or "GEN")
@@ -74,7 +74,7 @@ class NepseFilingsMonitor:
                 "filing_type": filing_type,
                 "filing_date": filing_date,
                 "year": year,
-                "ingested_at": datetime.now(timezone.utc).isoformat(),
+                "ingested_at": datetime.now(UTC).isoformat(),
             })
 
         chroma_store.upsert_documents("nepse_filings", docs=docs, metadatas=metadatas, ids=ids)
@@ -110,7 +110,7 @@ class LandPlanningMonitor:
         docs: list[str] = []
         metadatas: list[dict[str, Any]] = []
         ids: list[str] = []
-        current_year = datetime.now(timezone.utc).year
+        current_year = datetime.now(UTC).year
 
         for item in notices:
             title = str(item.get("title") or "Urban Planning Notice")
@@ -133,7 +133,7 @@ class LandPlanningMonitor:
                 "authority": authority,
                 "region": region,
                 "year": year,
-                "ingested_at": datetime.now(timezone.utc).isoformat(),
+                "ingested_at": datetime.now(UTC).isoformat(),
             })
 
         chroma_store.upsert_documents("kvda_plans", docs=docs, metadatas=metadatas, ids=ids)
@@ -146,7 +146,7 @@ def prune_expired_filings(max_age_years: int = 8) -> int:
 
     Filings older than 8-10 years are considered obsolete for active advisory.
     """
-    current_year = datetime.now(timezone.utc).year
+    current_year = datetime.now(UTC).year
     cutoff_year = current_year - max_age_years
     logger.info("Pruning NEPSE filings older than year %d (age > %d years)...", cutoff_year, max_age_years)
 

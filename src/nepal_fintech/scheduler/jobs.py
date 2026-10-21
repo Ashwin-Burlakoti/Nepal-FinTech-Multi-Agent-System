@@ -64,6 +64,7 @@ async def refresh_macro_state() -> None:
             await save_macro_state(session, payload.model_dump_json())
             # Save notification for the first active user if one exists
             from sqlalchemy import select
+
             from nepal_fintech.db.models import User
             first_user = (await session.execute(select(User.id).limit(1))).scalar_one_or_none()
             if first_user is not None:

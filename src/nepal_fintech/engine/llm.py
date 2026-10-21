@@ -42,8 +42,7 @@ def _clean_json_text(raw: str) -> str:
             cleaned = cleaned[first_newline + 1 :]
         else:
             cleaned = cleaned[3:]
-    if cleaned.endswith("```"):
-        cleaned = cleaned[:-3]
+    cleaned = cleaned.removesuffix("```")
     cleaned = cleaned.strip()
 
     # If surrounded by extraneous text, extract bracketed JSON object

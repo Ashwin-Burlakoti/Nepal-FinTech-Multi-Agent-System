@@ -3,9 +3,8 @@
 from __future__ import annotations
 
 import pytest
-from cryptography.fernet import Fernet, InvalidToken
+from cryptography.fernet import InvalidToken
 
-from nepal_fintech.config import settings
 from nepal_fintech.encryption import decrypt, encrypt, generate_key
 
 

@@ -4,7 +4,7 @@ from __future__ import annotations
 
 import os
 from collections.abc import AsyncGenerator
-import pytest
+
 import pytest_asyncio
 from cryptography.fernet import Fernet
 from sqlalchemy.ext.asyncio import AsyncSession, async_sessionmaker, create_async_engine
@@ -16,7 +16,6 @@ os.environ["DB_PATH"] = ":memory:"
 os.environ["CHROMA_PERSIST_DIR"] = ".test_chroma"
 os.environ["LLM_API_KEY"] = "test-key"
 
-from nepal_fintech.config import settings
 from nepal_fintech.db.models import Base
 
 # Test async SQLite in-memory engine

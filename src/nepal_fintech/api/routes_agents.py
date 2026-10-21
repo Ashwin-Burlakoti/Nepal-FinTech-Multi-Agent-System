@@ -3,8 +3,8 @@
 from __future__ import annotations
 
 import json
-from datetime import datetime, timezone
-from typing import Literal
+from datetime import datetime
+from typing import Annotated, Literal
 
 from fastapi import APIRouter, Depends, HTTPException
 from sqlalchemy.ext.asyncio import AsyncSession
@@ -42,8 +42,8 @@ AGENT_MAP: dict[str, type] = {
 async def run_agent(
     agent_name: AgentName,
     context: dict,
+    session: Annotated[AsyncSession, Depends(get_session)],
     user_id: int = 1,
-    session: AsyncSession = Depends(get_session),
 ) -> dict:
     """Run a specific agent's triad pipeline and save the notification."""
     agent_cls = AGENT_MAP.get(agent_name)
@@ -109,7 +109,7 @@ async def run_agent(
 
 @router.get("/macro/latest")
 async def get_macro(
-    session: AsyncSession = Depends(get_session),
+    session: Annotated[AsyncSession, Depends(get_session)],
 ) -> dict:
     """Get the latest cached macro state."""
     macro_json = await get_latest_macro_state(session)

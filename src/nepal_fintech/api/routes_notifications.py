@@ -2,6 +2,8 @@
 
 from __future__ import annotations
 
+from typing import Annotated
+
 from fastapi import APIRouter, Depends, HTTPException
 from sqlalchemy.ext.asyncio import AsyncSession
 
@@ -16,9 +18,9 @@ router = APIRouter(prefix="/api/notifications", tags=["notifications"])
 
 @router.get("/")
 async def list_notifications(
+    session: Annotated[AsyncSession, Depends(get_session)],
     user_id: int = 1,
     unread_only: bool = False,
-    session: AsyncSession = Depends(get_session),
 ) -> list[dict]:
     """List notifications for a user, optionally filtered to unread."""
     return await get_notifications(session, user_id, unread_only=unread_only)
@@ -27,7 +29,7 @@ async def list_notifications(
 @router.patch("/{notification_id}/read")
 async def mark_read(
     notification_id: int,
-    session: AsyncSession = Depends(get_session),
+    session: Annotated[AsyncSession, Depends(get_session)],
 ) -> dict:
     """Mark a notification as read."""
     try:

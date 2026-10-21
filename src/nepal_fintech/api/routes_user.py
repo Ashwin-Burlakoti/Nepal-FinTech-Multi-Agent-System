@@ -2,6 +2,8 @@
 
 from __future__ import annotations
 
+from typing import Annotated
+
 from fastapi import APIRouter, Depends, HTTPException
 from sqlalchemy.ext.asyncio import AsyncSession
 
@@ -15,7 +17,7 @@ router = APIRouter(prefix="/api/users", tags=["users"])
 @router.post("/onboard", status_code=201)
 async def onboard_user(
     profile: UserProfile,
-    session: AsyncSession = Depends(get_session),
+    session: Annotated[AsyncSession, Depends(get_session)],
 ) -> dict:
     """Create a new user with encrypted financial data."""
     user_id = await create_user(session, profile)
@@ -25,7 +27,7 @@ async def onboard_user(
 @router.get("/profile/{user_id}")
 async def get_profile(
     user_id: int,
-    session: AsyncSession = Depends(get_session),
+    session: Annotated[AsyncSession, Depends(get_session)],
 ) -> dict:
     """Retrieve a user profile (decrypted)."""
     user = await get_user(session, user_id)

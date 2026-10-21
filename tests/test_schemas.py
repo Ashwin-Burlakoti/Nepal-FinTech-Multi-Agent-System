@@ -2,7 +2,8 @@
 
 from __future__ import annotations
 
-from datetime import datetime, timezone
+from datetime import UTC, datetime
+
 import pytest
 from pydantic import ValidationError
 
@@ -12,10 +13,7 @@ from nepal_fintech.engine.schemas import (
     JudgeVerdict,
     MacroState,
     NepalLocal,
-    NotificationPayload,
     PortfolioSplit,
-    ThinkerOutput,
-    CritiqueOutput,
     UserProfile,
 )
 
@@ -95,7 +93,7 @@ def test_macro_state_schema() -> None:
             land_price_trend="Upward in outskirts",
         ),
         spillover_analysis="Remittance inflow cushions NPR liquidity",
-        timestamp=datetime.now(timezone.utc),
+        timestamp=datetime.now(UTC),
     )
     assert macro.nepal_local.gdp_trend == "4.5%"
     assert "Remittance" in macro.spillover_analysis

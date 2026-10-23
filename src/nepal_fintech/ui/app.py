@@ -47,4 +47,10 @@ def main(page: ft.Page) -> None:
 
 def start_ui() -> None:
     """Launch the Flet app targeting both web and desktop."""
-    ft.app(target=main, view=ft.AppView.WEB_BROWSER, port=8550)
+    if hasattr(ft, "run"):
+        ft.run(main, view=ft.AppView.WEB_BROWSER, port=8550)
+    elif hasattr(ft, "app"):
+        ft.app(target=main, view=ft.AppView.WEB_BROWSER, port=8550)
+    else:
+        msg = "Flet application runner not found (neither ft.run nor ft.app is available)"
+        raise RuntimeError(msg)
